@@ -52,4 +52,12 @@ public class Horario {
 		this.numeroDeSets = numeroDeSets;
 	}
 
+	public Integer getIdHorario() {
+		return idHorario;
+	}
+
+	public void setIdHorario(Integer idHorario) {
+		this.idHorario = idHorario;
+	}
+
 }

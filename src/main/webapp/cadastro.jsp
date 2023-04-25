@@ -1,8 +1,8 @@
 <%@page import="br.com.magna.esporte.model.HorarioDao"%>
-<%@ page import="java.util.List" %>
-<%@ page import="br.com.magna.esporte.model.Horario" %>
+<%@ page import="java.util.List"%>
+<%@ page import="br.com.magna.esporte.model.Horario"%>
 
- <%   List<Horario> horarios =  new HorarioDao().listar(); %> 
+<%List<Horario> horarios = new HorarioDao().listar();%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -26,10 +26,9 @@
 					<i class=""></i>
 				</div>
 				<div class="menu">
-					 <a class="menu-ativo" href="index.html">Home</a>
-					 <a href="form.jsp">Agende seu Horario</a> 
-					 <a href="contato.html">Contato</a> 
-					 <a href="cadastro.jsp">Cadastros</a>
+					<a class="menu-ativo" href="index.html">Home</a> <a href="form.jsp">Agende
+						seu Horario</a> <a href="contato.html">Contato</a> <a
+						href="cadastro.jsp">Cadastros</a>
 				</div>
 			</div>
 		</header>
@@ -40,29 +39,33 @@
 						<th>Nome</th>
 						<th>Esporte</th>
 						<th>Número de Sets</th>
+						<th>Editar</th>
+						<th>Excluir</th>
 					</tr>
 				</thead>
-				   <tbody id="horarios-table">
+				<tbody id="horarios-table">
 					<%
-					for (Horario horario  : horarios) {
+					for (Horario horario : horarios) {
 					%>
 					<tr>
 						<td><%=horario.getNome()%></td>
 						<td><%=horario.getEsporte()%></td>
 						<td><%=horario.getNumeroDeSets()%></td>
+						<td><button	onclick="editar(<%=horario.getIdHorario()%>);">Editar</button></td>
+						<td><button onclick="excluir(<%=horario.getIdHorario()%>);">Excluir</button></td>
 					</tr>
 					<%
 					}
 					%>
 				</tbody>
-				
 			</table>
 		</div>
 	</section>
-
 	<footer>
 		<p>Todos os direitos reservados!</p>
 	</footer>
 	<script src="https://kit.fontawesome.com/92e057dee7.js"
 		type="text/javascript" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="teste.js"></script>
+		<script type="text/javascript" src="excluir.js"></script>
 </body>

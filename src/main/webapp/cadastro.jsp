@@ -66,6 +66,6 @@
 	</footer>
 	<script src="https://kit.fontawesome.com/92e057dee7.js"
 		type="text/javascript" crossorigin="anonymous"></script>
-		<script type="text/javascript" src="teste.js"></script>
+		<script type="text/javascript" src="editar.js"></script>
 		<script type="text/javascript" src="excluir.js"></script>
 </body>
